@@ -104,13 +104,13 @@ public class BScreenConsumerSubTask extends Thread {
                 JSONObject consumerGroup = (JSONObject) object;
                 String group = consumerGroup.getString("group");
 
-                String ip = NetUtils.ip();
-                if (!StrUtils.isNull(ip)) {
-                    String host = consumerGroup.getString("host");
-                    if (!ip.equals(host)) {
-                        continue;
-                    }
-                }
+//                String ip = NetUtils.ip();
+//                if (!StrUtils.isNull(ip)) {
+//                    String host = consumerGroup.getString("host");
+//                    if (!ip.equals(host)) {
+//                        continue;
+//                    }
+//                }
 
                 // storage offline consumer summary
                 OwnerInfo ownerInfo = kafkaService.getKafkaActiverNotOwners(clusterAlias, group);
